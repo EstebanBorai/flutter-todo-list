@@ -7,13 +7,13 @@ import 'ui/views/todos_screen/todos_screen_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   await Hive.initFlutter();
   Hive.registerAdapter(TodoAdapter());
   await Hive.openBox('todos');
-  
+
   setupLocator();
-  
+
   runApp(const MyApp());
 }
 
